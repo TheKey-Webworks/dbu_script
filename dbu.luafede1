@@ -387,7 +387,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 		local targetted;
 		local transformStatus = false
 		local autoFarmLoopRunning = false
-		local stacked = false
+		local stacked = true
 		local flying = false
 	
 		local charge = false
