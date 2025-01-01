@@ -1384,13 +1384,12 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 				return OldHook(self, ...)
 			end)
 		end)
-		game:GetService("Workspace").Others.BossMaps:Destroy()
-		game:GetService("Workspace").Others.Map:Destroy()
+	
 	
 		questneeded = true
 		SelectedMobs1 = ""
-		getgenv().autostackloop = true
-		getgenv().stackneeded = true
+		getgenv().autostackloop = false
+		getgenv().stackneeded = false
 		-- main loop
 	
 		while true do
