@@ -1,4 +1,4 @@
-print("script v2.3 stack repair")-- Instances:
+print("script v2.3 stackneeded 2 repair")-- Instances:
 
 local _1262024DONTDELETEOREDITONLYDUP = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -383,7 +383,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 		task.wait()
 	
 	
-		local stackneeded = true
+		local stackneeded = false
 		local targetted;
 		local transformStatus = false
 		local autoFarmLoopRunning = false
@@ -1388,7 +1388,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 	
 		questneeded = true
 		SelectedMobs1 = ""
-		getgenv().autostackloop = false
+		getgenv().autostackloop = true
 		getgenv().stackneeded = false
 		-- main loop
 	
@@ -1405,7 +1405,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 					until getgenv().dead == false
 					if getgenv().stackneeded == true then
 	
-						stack1 = true
+						stack1 = false
 						--autostack(stack1)
 						repeat
 							success, err = pcall(function()
@@ -1851,7 +1851,7 @@ local function IRODSEX_fake_script() -- MainFrame.Autofarm handler
 												game.Players.LocalPlayer.Character.Humanoid.Health <= 0
 	
 											if game.Players.LocalPlayer.Character.Humanoid.Health <= 0 then
-												getgenv().stackneeded = true
+												getgenv().stackneeded = false
 												getgenv().dead = true
 												autoFarmLoopRunning = false
 												flying = false
